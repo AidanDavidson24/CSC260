@@ -1,0 +1,14 @@
+﻿@model Images
+
+<div class="card border-warning mb-3">
+    <h3 class="card-header">Post</h3>
+    <div class="card-body">
+        <form asp-controller="Image" asp-action="UploadPhoto" method="post">
+            <input type="hidden" asp-for="userID" />
+            <label>Image Link</label>
+            <input asp-for="imageName" class="form-control"/>
+            <span asp-validation-for="imageName" class="text-danger"></span>
+            <button type="submit" style="border-radius: 8px;">Submit</button>
+        </form>
+    </div>
+</div>

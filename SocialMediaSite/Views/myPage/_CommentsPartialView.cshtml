@@ -1,0 +1,13 @@
+﻿@model CommentStuff
+
+<div class="card smolCard mb-3; style=border-radius: 8px;">
+    <div class="card-header">
+        <form asp-controller="myPage" asp-action="OtherPage" method="get">
+            <input name="userID" type="hidden" value="@Model.comment.userID" />
+            <button type="submit" style="border-radius: 8px;">@Model.userName</button>
+        </form>
+    </div>
+    <div class="card-body">
+        <p class="card-text">@Model.comment.message</p>
+    </div>
+</div>

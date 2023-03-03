@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MyPage>
+
+@if (Model == null)
+{
+		<h2>No images provided</h2>
+}
+else
+{
+	<div class="uwuFlex">
+	@foreach (MyPage pages in Model)
+	{
+		<partial name="_resultPartialView.cshtml" for="@pages" />
+	}
+	</div>
+	<br />
+}

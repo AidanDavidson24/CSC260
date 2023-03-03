@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model Games;
+}
+
+<h1 class="text-center">The Game Library</h1>
+<h2>You have @ViewBag.count games in your collection</h2>
+<h2>Welcome to The Game Library! Go to <a asp-controller="Home" asp-action="Collection">your collection</a> to view and loan out games.</h2>

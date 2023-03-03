@@ -1,0 +1,98 @@
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: black;
+  color: white;
+}
+
+nav {
+    background-color: #313436;
+}
+
+a{
+    color: white;
+}
+
+    a:hover {
+        color: white;
+    }
+
+    a:active {
+        color: White;
+    }
+
+    a:visited {
+        color: darkred;
+    }
+
+h1, h2, h3{
+    text-align: center;
+    color: Red;
+}
+
+.btn {
+    color: var(--black);
+    background-color: red;
+    text-decoration: none;
+    padding: 1.5%, 2%;
+    margin: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+}
+
+    .btn:hover {
+        background-color: var(--btnhover);
+        border: none;
+    }
+
+    .btn:active {
+        background-color: var(--btnactive);
+        color: var(--btnactive);
+        border: none;
+    }
+
+.form{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 1.5%;
+    /*width: fit-content;*/
+}
+
+.info{
+    text-align: center;
+}
+
+input {
+    max-width: fit-content;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.errorMsg{
+    color: var(--error);
+    font-weight: bold;
+    text-decoration: underline;
+}

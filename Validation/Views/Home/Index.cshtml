@@ -1,0 +1,40 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+@model Profile;
+
+<h1>Please fill out the form below</h1>
+
+<div class="form">
+	<form method="post">
+
+		<label asp-for="Name"></label><br />
+		<input asp-for="Name" placeholder="Name" /><br />
+		<span asp-validation-for="Name" class="errorMsg"></span><br />
+
+		<label asp-for="Age"></label><br />
+		<input asp-for="Age" placeholder="Age" /><br />
+		<span asp-validation-for="Age" class="errorMsg"></span><br />
+
+
+		<label asp-for="street"></label><br />
+		<input asp-for="street" placeholder="Street" /><br />
+		<span asp-validation-for="street" class="errorMsg"></span><br />
+
+		<label asp-for="city"></label><br />
+		<input asp-for="city" placeholder="City" /><br />
+		<span asp-validation-for="city" class="errorMsg"></span><br />
+
+		<label asp-for="state"></label><br />
+		<input asp-for="state" placeholder="State" /><br />
+		<span asp-validation-for="state" class="errorMsg"></span><br />
+
+		<label asp-for="zipcode"></label><br />
+		<input asp-for="zipcode" placeholder="Zip Code" /><br />
+		<span asp-validation-for="zipcode" class="errorMsg"></span><br />
+
+
+		<button type="submit" class="btn">Submit</button>
+
+	</form>
+</div>

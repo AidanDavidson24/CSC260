@@ -1,0 +1,6 @@
+﻿@model MyPage
+
+<form asp-controller="myPage" asp-action="OtherPage" method="get">
+    <input name="userID" type="hidden" value="@Model.userID" />
+    <button type="submit" style="border-radius: 8px;">@Model.userName</button>
+</form>

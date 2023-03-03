@@ -1,0 +1,35 @@
+﻿@model MyPageImage
+
+<div class="card mb-3 smolCard">
+    <h3 class="card-header">My Page</h3>
+    <div class="card-body align-content-center">
+        <img class="profileIcon" src="@ViewBag.Image" />
+    </div>
+    <h2>About Me</h2>
+    <p>@Html.Raw(Model.myPages.aboutMe)</p>
+    <div class="card-footer">
+        <form asp-controller="Image" asp-action="ViewPhotos" method="get">
+            <input name="userID" type="hidden" value="@Model.myPages.userID"/>
+            <button type="submit" style="border-radius: 8px;">View Photos</button>
+        </form>
+        <form asp-controller="myPage" asp-action="AddComment" method="post">
+            <input name="comment.message" />
+            <input name="comment.pageID" type="hidden" value="@Model.myPages.Id" />
+            <button type="submit" style="border-radius: 8px;">Add Comment</button>
+        </form>
+    </div>
+</div>
+
+@if (Model.Comments == null)
+{
+    <h2>No comments provided</h2>
+}
+else
+{
+    <div class="uwuFlex">
+        @foreach (CommentStuff comment in Model.Comments)
+        {
+            <partial name="_CommentsPartialView.cshtml" for="@comment" />
+        }
+    </div>
+}

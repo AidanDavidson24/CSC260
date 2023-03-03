@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Games>
+@{
+    ViewData["Title"] = "Game Collection";
+}
+
+<h1>Game Collection</h1>
+<div class="form">
+    <form asp-controller="Home" asp-action="Search" method="post">
+        <input name="key" type="search" />
+        <button type="submit">Search</button>
+    </form>
+</div>
+<div>
+    <br /><a asp-controller="Home" asp-action="Add" class="add">Add New Game</a><br /><br />
+    <div class="allGames">
+        @foreach (Games games in Model)
+        {
+            <partial name="_GamePartialView" for="@games"/>
+        }
+    </div>
+    <form asp-controller="Home" asp-action="Filter" method="post">
+        <input name="genre" placeholder="Genre" />
+        <input name="platform" placeholder="Platform" />
+        <button type="submit" class="btn-primary btn-success">Filter</button>
+    </form>
+</div>

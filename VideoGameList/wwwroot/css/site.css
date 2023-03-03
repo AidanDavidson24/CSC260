@@ -1,0 +1,212 @@
+media (min-width: 768px) {
+    html{
+    font-size: 16px;
+        }
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: black;
+    margin-bottom: 60px;
+}
+
+nav, footer {
+    background-color: #313436;
+    color: red;
+    box-shadow: #2D2F31 2px 2px;
+}
+
+nav {
+    border-bottom: solid 1px #2D2F31;
+}
+
+footer {
+    border-top: solid 1px #2D2F31;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding: .5%;
+}
+
+    a, .nav-link, footer a:link {
+        color: grey;
+    }
+
+        a:hover, .nav-link:hover, footer a:hover {
+            color: red;
+        }
+
+        a:active, .nav-link:active, footer a:active {
+            color: #313436;
+        }
+
+    footer a:visited {
+        color: darkgrey;
+    }
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+.p {
+    color: white;
+}
+
+.g {
+    color: white;
+}
+
+.r {
+    color: white;
+}
+
+.allGames {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gameCard {
+    padding: 2%;
+    text-align:center;
+    background-color: #313436;
+    border: solid 1px #2D2F31;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+    max-width: 500px;
+    margin: 1%;
+}
+
+    .gameCard img {
+        flex-shrink: 1;
+        border: 5px solid #515355;
+        border-radius: 10px;
+    }
+
+.gameCard p{
+    font-size: 1.3em;
+}
+
+.gameCard input[type="text"] {
+    color: black;
+    background-color: dimgrey;
+    border: solid;
+    border-radius: 4px;
+}
+
+    .gameCard button, .AddBtn{
+        border: none;
+        background-color: gray;
+        padding: 1%;
+        margin: .5%;
+        width: fit-content;
+        color: black;
+        border-radius: 4px;
+    }
+
+    .gameCard button:hover {
+        background-color: red;
+    }
+
+    .gameCard button:active {
+        background-color: Red;
+        color: black;
+    }
+
+.edit, .delete, .backBtn, .add {
+    color: black;
+    text-decoration: none;
+    margin: 1.5%;
+    padding: 2%;
+    border-radius: 4px;
+}
+
+.edit {
+    background-color: Red;
+}
+
+    .edit:hover {
+        color: black;
+        background-color: grey;
+    }
+
+    .edit:active {
+        color: black;
+        background-color: grey;
+    }
+
+    .edit:visited, .delete:visited, .add:visited, .backBtn:visited{
+        color: black;
+    }
+
+.delete {
+    background-color: Red;
+}
+
+    .delete:hover {
+        color: black;
+        background-color: grey
+    }
+
+    .delete:active {
+        color: black;
+        background-color: grey;
+    }
+
+.backBtn, .add {
+    background-color: red;
+}
+
+    .backBtn:hover, .add:hover {
+        color: black;
+        background-color: grey;
+    }
+
+    .backBtn:active, address:active {
+        color: black;
+        background-color: grey;
+    }
+
+.add{
+    margin: 2% 45%;
+    font-size: 1.2em;
+}
+
+.form {
+    display: block;
+    text-align: center;
+}
+
+.AddForm {
+    background-color: grey;
+    border: solid 1px #2D2F31;
+    border-radius: 5px;
+    max-width: 500px;
+    color: black;
+    display: inline-block;
+    text-align: left;
+    padding: 1.5%;
+    margin: .5%;
+}
+
+    .AddForm input {
+        color: black;
+        background-color: #2D2F31;
+        border: solid #1e2021;
+        border-radius: 4px;
+    }

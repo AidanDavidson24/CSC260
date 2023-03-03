@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Images>
+
+@if (Model == null)
+{
+		<h2>No images provided</h2>
+}
+else
+{
+		<div class="uwuFlex">
+		@foreach (Images image in Model)
+		{
+				<partial name="_ImagePartialView.cshtml" for="@image" />
+		}
+		</div>
+		<br />
+		<form asp-controller="myPage" asp-action="OtherPage" method="get">
+			<input type="hidden" name="userID" value="@Model.FirstOrDefault().userID" />
+		<button type="submit" style="border-radius: 8px;">Return to My Page</button>
+		</form>
+}

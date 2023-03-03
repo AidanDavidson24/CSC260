@@ -1,0 +1,34 @@
+﻿@model Games
+<h1>Add a New Game</h1>
+
+<div class="form">
+	<div asp-validation-summary="All" class="errormsg"></div>
+
+<form asp-action="Add" method="post" class="AddForm">
+	<label asp-for="Title"></label><br />
+	<input asp-for="Title" /><br />
+		<span asp-validation-for="Title" class="errormsg"></span><br />
+
+	<label asp-for="Rating"></label><br />
+	<input asp-for="Rating" /><br />
+
+	<label asp-for="Genre"></label><br />
+	<input asp-for="Genre" /><br />
+		<span asp-validation-for="Genre" class="errormsg"></span><br />
+
+	<label asp-for="Platform"></label><br />
+	<input asp-for="Platform" /><br />
+		<span asp-validation-for="Platform" class="errormsg"></span><br />
+
+	<label asp-for="ReleaseYear"></label><br />
+	<input asp-for="ReleaseYear" /><br />
+		<span asp-validation-for="ReleaseYear" class="errormsg"></span><br />
+
+	<label asp-for="Image"></label><br />
+	<input asp-for="Image" /><br /><br />
+
+	<button type="submit" class="AddBtn">Add Game</button> <br /> <br />
+	<a asp-action="Collection" asp-controller="Home" class="backBtn">Back to your collection</a>
+</form>
+
+</div>

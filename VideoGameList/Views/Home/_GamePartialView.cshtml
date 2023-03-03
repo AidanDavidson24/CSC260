@@ -1,0 +1,57 @@
+﻿@model Games;
+
+@if (Model == null)
+{
+	<h1>No Games in Collection</h1>
+}
+else
+{
+	<div class="gameCard">
+		<div class="gameCardBody">
+			<h2>@Model.Title</h2>
+			@if (Model.Image == null || Model.Image == "")
+			{
+				<img src="~/assets/placeholder.jpg" width="400px" alt="No Image given">
+			}
+			else
+			{
+				<img src="~/assets/@Model.Image" width="400px">
+			}
+			<br>
+			<p class="p">Platforms: @Model.Platform</p>
+			<p class="r">Release Year: @Model.ReleaseYear</p>
+			<p class="g">Genre: <br /> @Model.Genre</p>
+			@if (Model.Rating == null)
+			{
+				<p class="r">ESRB Rating: Unrated</p>
+			}
+			else
+			{
+				<p class="r">ESRB Rating: @Model.Rating</p>
+			}
+
+			@if (Model.LoanedDate.HasValue)
+			{
+				<p class="pink">Loaned to <b>@Model.LoanedTo</b> on <b>@Model.LoanedDate</b></p>
+				<form asp-action="Return" asp-route-id="@Model.Id" method="post">
+					<button type="submit">Return</button>
+				</form>
+
+			}
+			else
+			{
+				<div class="form">
+					<form asp-action="Collection" asp-route-id="@Model.Id" method="post">
+						<input asp-for="LoanedTo" name="LoanedTo" placeholder="Name" required>
+						<button type="submit">Loan</button>
+						</form>
+					</div>
+			}
+			<br />
+			<a asp-action="Edit" asp-route-id="@Model.Id" class="edit">Edit</a>
+
+			<a asp-action="Delete" asp-route-id="@Model.Id" class="delete">Delete</a>
+
+		</div>
+	</div>
+}
